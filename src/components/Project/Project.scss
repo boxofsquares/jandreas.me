@@ -1,0 +1,69 @@
+@import '../../global.scss';
+
+.project {
+  display: grid;
+  grid-area: project;
+  grid-template: 
+  ' motivation code-sample visual technologies ' 1fr
+  ' . positive positive . ' 5rem
+  ' . negative negative . ' 5rem / 20% 30% 30% 20%;
+  overflow: auto;
+  padding: 2rem;
+
+  @media only screen and (max-width: 1200px) {
+    grid-template: 
+    ' motivation technologies 'auto
+    ' code-sample visual ' auto
+    ' positive negative ' auto / 1fr 1fr;
+  }
+
+  @media only screen and (max-width: 900px) {
+    grid-template: 
+    ' motivation' auto
+    ' technologies ' auto
+    ' code-sample  ' auto
+    ' visual ' auto
+    ' positive ' auto
+    ' negative ' auto / 1fr;
+    grid-gap: none;
+  }
+
+  .motivation {
+    grid-area: motivation;
+  }
+
+  .code-sample {
+    grid-area: code-sample;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    
+    .code-block-wrapper {
+      overflow: auto;
+    }
+  }
+
+  .visual {
+    grid-area: visual;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    
+    .visual-wrapper {
+      overflow: auto;
+    }
+  }
+
+  .technologies {
+    grid-area: technologies;
+  }
+
+  .positive {
+    grid-area: positive;
+  }
+
+  .negative {
+    grid-area: negative;
+  }
+}

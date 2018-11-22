@@ -1,0 +1,66 @@
+class _DraggableFocusBoxState extends State<DraggableFocusBox> {
+  Offset position;
+  double width;
+  double height;
+  double startWidth;
+  double startHeight;
+  
+  //Dragging
+  Offset _correctionPanPosition;
+
+  @override
+  void initState() {
+    position = widget.initPos;
+    width = widget.initWidth;
+    height = widget.initHeight;
+    print(height);
+    super.initState();
+  }
+
+  //TODO: Implement uni-lateral scaling (rectangular)
+  @override
+  Widget build(BuildContext context) { 
+    Color _boxAccent;
+    Color _textAccent;
+    if (widget.retry) {
+      _boxAccent = Colors.redAccent;
+      _textAccent = Colors.redAccent;
+    } else {
+      _boxAccent = widget.success ? Colors.lightGreenAccent : Theme.of(context).primaryColor;
+      _textAccent = widget.success ? Colors.lightGreenAccent : Colors.white24;
+    }
+    return CropSelectionStack(
+      child: GestureDetector(
+        child: new Stack(children: <Widget>[
+          widget.background,
+          Positioned(
+            left: position.dx,
+            top: position.dy,
+            child: Container(
+              key: widget.cropBoxKey,
+              child: Center(
+                child: widget.isLoading ?
+                  CircularProgressIndicator() :
+                  Text(widget.challengeWord, style: TextStyle(color:_textAccent,fontSize: 64.00),),),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: _boxAccent,
+                  width: 5.0,
+                  style: BorderStyle.solid,
+                  
+                ),
+                borderRadius: BorderRadius.circular(16.00),
+              ),
+              width: width,
+              height: height,
+            ),
+          ),
+        ]),
+        onScaleStart: onScaleStart,
+        onScaleUpdate: onScaleUpdate,
+        onScaleEnd: onScaleEnd,
+      ),
+      position: position,
+      size: Size(width, height),
+    );
+  }

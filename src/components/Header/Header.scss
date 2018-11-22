@@ -1,0 +1,15 @@
+@import '../../global.scss';
+
+.header {
+  grid-area: header;
+  background-color: $accent;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding: 2rem;
+
+  h1, span {
+    color: $secondary-text;
+    padding-right: 1rem;
+  }
+}

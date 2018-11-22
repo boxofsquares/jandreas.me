@@ -1,0 +1,54 @@
+[
+  {
+    "id": "prorep",
+    "title": "ProRep",
+    "motivation": "I felt like doing a project that was cool and entertaining.",
+    "gist": {
+      "id": "f2d9c21e7f50a946f3447e69f562c027",
+      "fileName": "prorep.jsx"
+    },
+    "visual": "prorep.png",
+    "technologies": "React, Heroku",
+    "fun": "Ease-of-use of the create-react-app node package and Webpack, a new tool I hadn't used before. Also, inline SVG's and the fact that they can be manipulated through CSS.",
+    "pain": "Writing the React component for a custom range slider (with two sliders in this case)  took days, and a surprising amount of custom code for a seemingly simple web component."
+  },
+  {
+    "id": "bikecouch",
+    "title": "BikeCouch",
+    "motivation": "A hiatus-summer and a very appropriately tailored Google News Feed. I had tried Apache Cordova on a student project before, and was left with rather mixed feelings. On top of that, I wanted to get some experience with (quasi) native mobile development. The Flutter SDK was a natural pick - as the newest kid on the block - and was a pleasure to work in from the get-go and its more wide-spread adoption is something to look forward to!",
+    "gist": {
+      "id": "f2d9c21e7f50a946f3447e69f562c027",
+      "fileName": "bikecouch.dart"
+    },
+    "visual": "prorep.png",
+    "technologies": "Flutter SDK, Firebase/Firestore, Google Vision API",
+    "fun": "Whipping up an app in mere days!",
+    "pain": "At the time of development, the documentation and community support of Flutter was not great."
+  },
+  {
+    "id": "schemamatcher",
+    "title": "Lexical Schema Matcher",
+    "motivation": "This is the coding part of my Hnrs. Computer Science & Physics degree, completed during my last year in college. The title sounds ominous, but Open Data is something I didn't know existed, and while I was working on this project, grew to something that I hope I supported by writing about it.",
+    "gist": {
+      "id": "f2d9c21e7f50a946f3447e69f562c027",
+      "fileName": "prorep.jsx"
+    },
+    "visual": "prorep.png",
+    "technologies": "Node.js, Cheerio (Web Crawling), Research Paper Thingy",
+    "fun": "Bascially all of it.",
+    "pain": "Gists are unnecessarily hard to embed in React.js."
+  },
+  {
+    "id": "proj4",
+    "title": "Project 4",
+    "motivation": "Motivation for Project 4.",
+    "gist": {
+      "id": "f2d9c21e7f50a946f3447e69f562c027",
+      "fileName": "prorep.jsx"
+    },
+    "visual": "prorep.png",
+    "technologies": "React, Webpack, GitHub Pages",
+    "fun": "Bascially all of it.",
+    "pain": "Gists are unnecessarily hard to embed in React.js."
+  }
+]

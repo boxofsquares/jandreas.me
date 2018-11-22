@@ -1,0 +1,62 @@
+class District extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      toggleInfo: false,
+    }
+    // this.handleChange = this.handleChange.bind(this);
+    this.handleSliderChange = this.handleSliderChange.bind(this);
+    this.toggleInfo         = this.toggleInfo.bind(this);
+  }
+  
+  render() {
+    const { results }              = this.props.details;
+    const { popSliders, showInfo } = this.props;
+    const { toggleInfo }           = this.state;
+    const winner                   = this.getWinner()["party"];
+
+    let infoBox; 
+    if (showInfo) {
+      infoBox = toggleInfo ? 
+        <span className="info info-box" >{Info.district}<span className="info-close" onClick={this.toggleInfo}>X</span></span> : 
+        <span className="info info-tag" onClick={this.toggleInfo}>?</span>;
+    }
+
+    return (
+      <div className={"district " + winner + " border-bottom-" + winner}>
+        <div className="district-title-wrapper">
+          <h2>{this.props.name}</h2>
+          { infoBox }
+        </div>
+        <VoteSlider low={results.blue.votes} high={results.blue.votes + results.red.votes} handleChange={this.handleSliderChange} popSliders={popSliders}/>
+      </div>
+    );
+  }
+
+  // Handlers
+  handleSliderChange({ low, high }) {
+    const { notifyParent }        = this.props;
+    let   { districtId, results } = this.props.details;
+    
+    results.blue.votes  = low;
+    results.red.votes   = high - low;
+    results.green.votes = 100 - high;
+
+    notifyParent({ districtId, results });
+  }
+
+  getWinner() {
+    let _results = this.props.details.results;
+    return ["blue","red","green"].reduce((acc, _party) => {
+      if (_results[_party].votes > acc.votes) {
+        return {party: _party, votes: _results[_party].votes }
+      } else {
+        return acc;
+      }
+    }, {party: "", votes: 0 })
+  }
+
+  toggleInfo() {
+    this.setState({ toggleInfo: !this.state.toggleInfo });
+  }
+}
