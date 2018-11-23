@@ -9,7 +9,6 @@ module.exports = {
   devServer: {
     contentBase: './build'
   },
-  mode: 'development',
   module: {
     rules: [
       {

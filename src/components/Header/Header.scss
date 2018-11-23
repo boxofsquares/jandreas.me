@@ -8,8 +8,17 @@
   align-items: baseline;
   padding: 2rem;
 
-  h1, span {
+  h1, a {
     color: $secondary-text;
     padding-right: 1rem;
   }
+
+  svg {
+    margin-right: 0.4rem;
+    path {
+      fill: $highlight;
+    }
+  }
+
+
 }

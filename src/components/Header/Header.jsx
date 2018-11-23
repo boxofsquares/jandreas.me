@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import './Header.scss';
 
@@ -8,9 +11,12 @@ class Header extends Component {
       <div className='header'>
         <h1>Janik Andreas</h1>
         <div>
-          <span>e. j.andreas@posteo.de</span>
-          <span>/in/janikandreas</span>
-          <span>boxofsquares</span>
+          <FontAwesomeIcon icon={faEnvelope} />
+          <a href='mailto:j.andreas@posteo.de'>j.andreas@posteo.de</a>
+          <FontAwesomeIcon icon={faLinkedinIn} />
+          <a href='https://linkedin.com/in/janikandreas'>janikandreas</a>
+          <FontAwesomeIcon icon={faGithub} />
+          <a href='https://github.com/boxofsquares'>boxofsquares</a>
         </div>
       </div>
     );

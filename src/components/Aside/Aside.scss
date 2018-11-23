@@ -1,4 +1,87 @@
+@import '../../global.scss';
+
 .aside {
   align-self: flex-start;
   padding: 0 1rem 0 1rem;
+  
+
+  h2, svg {
+    display: inline-block;
+    padding-right: 0.5rem;
+  }
+
+  svg {
+
+    path {
+      fill: $highlight;
+    }
+  }
+
+  .content {
+    text-align: justify;
+  }
+
+  .links {
+    list-style: none;
+  }
+
+  .tech-tags {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media only screen and (max-width: 1200px) {
+      flex-direction: row;
+    } 
+    .tech-tag {
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      margin-right: 0.5rem;
+      border-radius: $border-radius;
+      font-weight: 700;
+      color: $secondary-text;
+      width: min-content;
+
+      &.react {
+        background-color: #00d8ff;
+      }
+
+      &.node {
+        background-color: #6cc24a;
+      }
+      
+      &.javascript {
+        background-color: #f1e05a;
+      }
+
+      &.flutter, &.dart {
+        background-color: #00B4AB;
+      }
+
+      &.golang {
+        background-color: #375eab;  
+      }
+
+      &.heroku {
+        background-color: #6762a6;
+      }
+
+      &.google-vision {
+        background-color: #ea4335;
+      }
+
+      &.firebase {
+        background-color: #fbbc05;
+      }
+
+      &.sass {
+        background-color: #cf649a;
+      }
+
+      &.webpack {
+        background-color: #75AFCC;
+      }
+    }
+  }
 }

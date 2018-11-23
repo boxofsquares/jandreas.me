@@ -1,14 +1,15 @@
 @import '../../global.scss';
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 .project {
   display: grid;
   grid-area: project;
+  justify-content: space-between;
   grid-template: 
-  ' motivation code-sample visual technologies ' 1fr
-  ' . positive positive . ' 5rem
-  ' . negative negative . ' 5rem / 20% 30% 30% 20%;
+  ' motivation code-sample visual technologies ' 0.4fr
+  ' motivation code-sample visual links ' 0.4fr
+  ' . positive negative . ' 0.2fr / 20% 28% 28% 20%;
   overflow: auto;
-  padding: 2rem;
 
   @media only screen and (max-width: 1200px) {
     grid-template: 
@@ -28,6 +29,21 @@
     grid-gap: none;
   }
 
+  .title-wrapper { 
+    .title, svg {
+      display: inline-block;
+      vertical-align: middle;   
+      margin-right: 0.5rem;
+    }
+
+    svg {
+      path {
+      fill: $highlight;
+      stroke: $accent;
+      }
+    }
+  }
+
   .motivation {
     grid-area: motivation;
   }
@@ -41,6 +57,9 @@
     
     .code-block-wrapper {
       overflow: auto;
+      code {
+        font-family: 'Source Code Pro', monospace;
+      }
     }
   }
 
@@ -61,9 +80,11 @@
 
   .positive {
     grid-area: positive;
+    align-self: flex-start;
   }
 
   .negative {
     grid-area: negative;
+    align-self: flex-start;
   }
 }

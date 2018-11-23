@@ -1,6 +1,7 @@
 @import '../../global.scss';
 
 .projects {
+  grid-area: projects;
   width: 100%;
   padding: 1rem 0 1rem 0;
   
@@ -19,7 +20,7 @@
 
       &.current {
         background-color: $accent;
-        color: $secondary-text;
+        color: $highlight;
       }
     }
   }

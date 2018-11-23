@@ -1,3 +1,17 @@
+@import '../../global.scss';
+
 .comment {
   padding-top: 1rem;
+
+  h2 {
+    display: inline-block;
+  }
+
+  svg {
+    margin-right: 1rem;
+
+    path {
+      fill: $highlight;
+    }
+  }
 }
