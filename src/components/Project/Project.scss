@@ -6,9 +6,9 @@
   grid-area: project;
   justify-content: space-between;
   grid-template: 
-  ' motivation code-sample visual technologies ' 0.4fr
-  ' motivation code-sample visual links ' 0.4fr
-  ' . positive negative . ' 0.2fr / 20% 28% 28% 20%;
+  ' motivation code-sample visual technologies ' 1fr
+  ' motivation code-sample visual links ' 1fr
+  ' . positive negative . ' minmax(min-content, 0.5fr) / 0.8fr 1fr 1fr 0.8fr ;
   overflow: auto;
 
   @media only screen and (max-width: 1200px) {
