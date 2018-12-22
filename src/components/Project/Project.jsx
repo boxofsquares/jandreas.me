@@ -6,7 +6,10 @@ import './Project.scss';
 import Aside from '../Aside/Aside.jsx';
 import Comment from '../Comment/Comment.jsx';
 
-import CodeVisual from '../../images/prorep.png';
+import ProRepVisual from '../../images/prorep.png';
+import BikeCouchVisual from '../../images/bikecouch.png';
+import QueryBuilderVisual from '../../images/querybuilder.png';
+import MonsterserverVisual from '../../images/monsterserver.png';
 import ProRepSnippet from '../../snippets/prorep.txt';
 import BikeCouchSnippet from '../../snippets/bikecouch.txt';
 import QueryBuilderSnippet from '../../snippets/querybuilder.txt';
@@ -15,21 +18,24 @@ import MonsterserverSnippet from '../../snippets/monsterserver.txt';
 const snippets = {
   prorep: {
     content: ProRepSnippet,
-    language: 'jsx'
+    language: 'jsx',
+    visual: ProRepVisual,
   },
   bikecouch: {
     content: BikeCouchSnippet,
     language: 'dart',
+    visual: BikeCouchVisual,
   },
   querybuilder: {
     content: QueryBuilderSnippet,
     language: 'javascript',
+    visual: QueryBuilderVisual,
   },
   monsterserver: {
     content: MonsterserverSnippet,
     language: 'go',
+    visual: MonsterserverVisual,
   }
-
 };
 
 import hljs from 'highlight.js/lib/highlight';
@@ -76,7 +82,7 @@ class Project extends Component {
             <h2 className='title'>Visual</h2>
           </div>
           <div className='visual-wrapper'>
-            <img style={{width: '100%'}} src={CodeVisual} />
+            <img style={{width: '100%'}} src={snippets[project.id].visual} />
           </div>
         </div>
         <Aside 

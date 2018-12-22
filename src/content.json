@@ -3,7 +3,6 @@
     "id": "prorep",
     "title": "ProRep",
     "motivation": "In light of the recent Vancouver municipal election and BC referendum on electoral reform, I decdied to ramp up my civil engagement. I was triggered by an acquaintance hitting me with the 'Why do you vote? It doesn't change a thing anyway!' at a seemingly docile dinner party. I made this tool to help my friends decide in a more hands-on-way whether they support a system based on proportional representation.",
-    "visual": "prorep.png",
     "technologies": {
       "tags": ["react","heroku", "javascript", "webpack", "sass"],
       "content": ""
@@ -18,7 +17,6 @@
     "id": "bikecouch",
     "title": "BikeCouch",
     "motivation": "A hiatus-summer, a very appropriately tailored Google News Feed and the desire to learn something new. I had tried Apache Cordova on a student project before, and was left with rather mixed feelings. On top of that, I wanted to get some experience with (quasi) native mobile development. The Flutter SDK was a natural pick - as the newest kid on the block - and was a pleasure to work in from the get-go and its more wide-spread adoption is something to look forward to!",
-    "visual": "prorep.png",
     "technologies": {
       "tags": ["flutter","firebase","googlevision","dart"],
       "content": "A mix of the following tech:"
@@ -26,14 +24,13 @@
     "links": {
       "github": "https://github.com/boxofsquares/bikecouch"
     },
-    "fun": "All the struggle to create a minimalistic, but working UI is taken away by Flutter by their great 'Evertyhing is a Widget' approach. Scaffolding is a question of seconda, letting you focus on the important pieces and enabling you to whip up an app in mere days.",
+    "fun": "All the struggle to create a minimalistic, but working UI is taken away by Flutter by their great 'Evertyhing is a Widget' approach. Scaffolding is a question of seconds, letting you focus on the important pieces and enabling you to whip up an app in mere days.",
     "pain": "At the time of development, the documentation and community support of Flutter was not great."
   },
   {
     "id": "querybuilder",
     "title": "Lexical Schema Matcher",
     "motivation": "This is the coding part of my Hnrs. Computer Science & Physics degree, completed during my last year in college. Open Data is something I didn't know existed, and while I was working on this project it grew to something that I hope I supported by writing about it.",
-    "visual": "prorep.png",
     "technologies": {
       "tags": ["node","javascript","paper"],
       "content": ""
@@ -48,7 +45,6 @@
     "id": "monsterserver",
     "title": "MonsterServer",
     "motivation": "A recent passion for the decade-old role playing game Dungeons & Dragons sparked this one. This simple server is used to server monster information to another app that I am currently building with a friend.",
-    "visual": "prorep.png",
     "technologies": {
       "tags": ["golang","node","javascript"],
       "content": ""
@@ -56,7 +52,7 @@
     "links": {
       "github": "https://github.com/boxofsquares/monsterserver"
     },
-    "fun": "Bascially all of it.",
-    "pain": "Gists are unnecessarily hard to embed in React.js."
+    "fun": "Backwards engineering of API's always feels strangely rewarding. Something about the 'I did it myself!' moment.",
+    "pain": "While Marshalling in Go is a neat built-in feature to facilitate (de-)serialization of data between Go and JSON, it can be tricky sometimes."
   }
 ]
